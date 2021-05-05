@@ -12,21 +12,16 @@ ul {
   list-style: none;
 }
 
-body {
-  background: #F8F8F8;
-  font-size: 18px;
-}
 
 .container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   margin-top: 20px;
-
 }
 
 .navbar__items ul {
-  display:flex;
+  display: flex;
 }
 
 .navbar__items li {
@@ -36,21 +31,22 @@ body {
 
 .navbar__items a {
   color: #000;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
   padding: 5px;
+  font-weight: 500;
 }
 
 .logo img {
   width: 40px;
   height: 40px;
-  transition: 0.2s;
+  transition: 0.350s;
   animation: ease-out;
 }
 
 .logo img:hover {
   transform: scale(1.1);
-  transition: 0.2s;
+  transition: 0.350s;
   animation: ease-in;
 }
 
@@ -59,42 +55,35 @@ body {
 }
 
 .btn::after {
-  content:'';
+  content: "";
   position: absolute;
   width: 100%;
   height: 0.175rem;
   left: 0;
   bottom: 0;
-  background-color: #ffcc29;
+  background-color: #F55F44;
   transform: scale(0, 1);
-  transition: transform 0.2s ease;
+  transition: transform 0.350s ease;
 }
 
 .btn:hover::after {
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+  }
 
+  .logo {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
 
-@media only screen and (min-width:320px) and (max-width:480px){
-
-    .container {
-      margin: 0 ;
-      padding: 0;
-      border: 1px solid red;
-      
-    }
-
-    .logo {
-        margin-left: 10px;
-        margin-top: 15px
-    }
-
-        .navbar__items Button {
-          display: none;
-          justify-content: flex-end;
-        }
-
+  .navbar__items Button {
+    display: none;
+    justify-content: flex-end;
+  }
 }
-
-

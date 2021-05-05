@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
+import ProyectosCard from "./ProyectosCard";
+import "./styles-proyectos.css";
 
 
 const Proyectos = () => {
+  return (
+    <div>
+        <ProyectosCard />
+    </div>
+  );
+};
 
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-
-export default Proyectos
+export default Proyectos;
