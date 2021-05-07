@@ -1,8 +1,3 @@
-.container-hero {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
-}
 body {
   background-image: linear-gradient(
     200deg,
@@ -12,10 +7,17 @@ body {
   );
 }
 
+.container-hero {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
 
 .hero__izquierda {
   width: 50%;
 }
+
 
 .hero-title {
   display: inline-block;
@@ -44,12 +46,17 @@ body {
   width: 100%;
   height:80%; 
   margin-top: 50px;
-
+  
 }
 
 /* MEDIA QUERYS */
 
 @media only screen and (max-width: 400px) {
+
+  .container-hero {
+    margin-top: -20px;
+  }
+
   .hero__derecha img {
     display: none;
   }

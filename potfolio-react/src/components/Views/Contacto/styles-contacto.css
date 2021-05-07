@@ -1,41 +1,20 @@
 .container-contacto {
-  display: flex;
-  justify-content: space-evenly;
   background: #fff;
-  align-items: center;
   padding: 50px 0px;
   margin: 200px 0 0 0;
   background: inherit;
   box-shadow: 0px 1px 14px -5px #000;
 }
 
-.author {
-  font-size: 15px;
-  font-family: "Quicksand", sans-serif;
-}
-
-.logo-central img {
-  width: 80px;
-  margin-bottom: 170px;
-  transition: 0.35s;
-}
-.logo-central img:hover {
-  width: 80px;
-  margin-bottom: 170px;
-  transform: scale(1.1);
-  transition: 0.35s;
-  animation: ease-in;
-  cursor: pointer;
-}
 .container-icons {
   display: flex;
-
-  width: 100px;
+  justify-content: center;
 }
 
 .icon-contacto {
-  margin: 0 30px;
-  transition: 0.35s;
+  width: 45px;
+  margin: 0 60px;
+  
 }
 
 .icon-contacto:hover {
@@ -45,21 +24,23 @@
   cursor: pointer;
 }
 
+.author {
+  text-align: end;
+  margin-top:30px;
+  margin-bottom: -50px;
+  padding: 0;
+  font-weight: 300;
+  color: #444;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 600px) {
-  .logo-central img {
-    display: none;
+  .container-contacto {
+    margin: 4px 0;
   }
 
-  .container-contacto {
-    margin: 0;
-  }
 
   .author {
     display: none;
-  }
-
-  .container-contacto {
-    justify-content: center;
   }
 
   .container-icons {
@@ -68,9 +49,7 @@
 }
 
 @media only screen and (max-width: 768px) and (max-width: 1024px) {
-  .logo-central img {
-    display: none;
-  }
+
 
   .container-contacto {
     justify-content: space-evenly;
@@ -97,7 +76,6 @@
   .author {
     justify-content: space-evenly;
   }
-
   .container-icons {
     justify-content: space-evenly;
   }
