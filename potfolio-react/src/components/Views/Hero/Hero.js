@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <div>
       
-      <div className="container-hero">
+      <div className="container-hero" id="hero">
         <div className="hero__izquierda">
           <h2 className="hero-title">Bienvenidos,</h2>
           <p className="hero-text">Me llamo Nico, soy desarrollador Front End, y este es mi Portafolio. Espero que lo disfrutes!</p>

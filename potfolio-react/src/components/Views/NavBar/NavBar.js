@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-scroll";
 import logo from "./img/logo.png";
 import "./styles-navbar.css";
 import MenuDesplegable from "./MenuDesplegable";
@@ -8,7 +9,6 @@ export default function NavBar() {
     <>
       <div className="container">
         <MenuDesplegable />
-
         <div className="logo">
           <a href="#">
             <img src={logo} alt="" />
@@ -17,21 +17,39 @@ export default function NavBar() {
         <nav className="navbar">
           <div className="navbar__items">
             <ul>
-              <li>
-                <a className="btn" href="#">
-                  SOBRE MI
-                </a>
-              </li>
-              <li>
-                <a className="btn" href="#">
-                  PROYECTOS
-                </a>
-              </li>
-              <li>
-                <a className="btn" href="#">
-                  CONTACTO
-                </a>
-              </li>
+              <Link
+                className="buttons"
+                activeClass="active"
+                to="hero"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+              >
+                SOBRE MI
+              </Link>
+              <Link
+                className="buttons"
+                activeClass="active"
+                to="proyectos"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+              >
+                PROYECTOS
+              </Link>
+              <Link
+              className="buttons"
+                activeClass="active"
+                to="contacto"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+              >
+                CONTACTO
+              </Link>
             </ul>
           </div>
         </nav>

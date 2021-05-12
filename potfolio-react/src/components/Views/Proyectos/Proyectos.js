@@ -44,7 +44,7 @@ const proyectos = [
 
 const Proyectos = () => {
   return (
-    <div className="container-proyectos">
+    <div className="container-proyectos" id="proyectos">
       <Card proyectos={proyectos[0]} />
       <Card proyectos={proyectos[1]} />
       <Card proyectos={proyectos[2]} />
