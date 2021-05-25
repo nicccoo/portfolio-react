@@ -13,12 +13,13 @@ const Contacto = () => {
           <a href="mailto:nicolas_31_07@hotmail.com">
             <img className="icon-contacto" src={email} alt="" />
           </a>
-          <a href="https://github.com/nicccoo" target="_blank">
+          <a href="https://github.com/nicccoo" rel="noreferrer" target="_blank">
             <img className="icon-contacto" src={github} alt="" />
           </a>
           <a
             href="https://www.linkedin.com/in/nicolasramirez-dev/"
             target="_blank"
+            rel="noreferrer"
           >
             <img className="icon-contacto" src={linkedin} alt="" />
           </a>

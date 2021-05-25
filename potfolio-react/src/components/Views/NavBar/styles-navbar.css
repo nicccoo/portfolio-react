@@ -28,7 +28,7 @@ ul {
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   padding: 5px;
-  margin: 0 13px 0 13px;
+  margin: 0 14px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -69,6 +69,7 @@ ul {
 .container-desplegable {
   display: none;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .container {
     padding: 0;
