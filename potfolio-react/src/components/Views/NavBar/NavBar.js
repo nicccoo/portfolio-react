@@ -8,6 +8,8 @@ export default function NavBar() {
   return (
     <>
       <div className="container">
+        
+
         <MenuDesplegable />
         <div className="logo">
           <a href="#">
@@ -24,7 +26,7 @@ export default function NavBar() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                offset={50}
+                offset={0}
               >
                 SOBRE MI
               </Link>
@@ -35,7 +37,7 @@ export default function NavBar() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                offset={50}
+                offset={0}
               >
                 PROYECTOS
               </Link>
@@ -46,14 +48,16 @@ export default function NavBar() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                offset={50}
+                offset={0}
               >
                 CONTACTO
               </Link>
             </ul>
           </div>
         </nav>
+        
       </div>
+
     </>
   );
 }

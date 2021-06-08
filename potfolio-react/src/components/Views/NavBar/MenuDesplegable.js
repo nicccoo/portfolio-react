@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     left: "60px",
   },
   menuButton: {
-    bottom: "20px",
+    bottom: "10px",
   },
 });
 

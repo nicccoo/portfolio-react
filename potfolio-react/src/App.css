@@ -1,3 +1,10 @@
+:root {
+  --bg-purple-dark: rgba(40, 28, 77);
+  --bg-purple-light: rgba(83, 41, 174);
+  --bg-purple-ultralight: rgba(98,45,178);
+}
+
+
 * {
   margin: 0;
   padding: 0;
