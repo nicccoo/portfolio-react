@@ -9,10 +9,11 @@ export const Hero = () => {
       <div className="container-hero" id="hero">
 
         <div className="hero__izquierda">
-          <h2 className="hero-title">Bienvenidos,</h2>
+          <h2 className="hero-title">Bienvenidos!</h2>
           <p className="hero-text">
-            Me llamo Nico, soy desarrollador Front End, y este es mi Portafolio.
-            Espero que lo disfrutes!
+            Me llamo <b className="orange">Nico,</b> soy desarrollador <b className="orange">Front End</b> 
+            <p>y este es mi <b className="orange">Portafolio. </b>Espero que lo disfrutes!</p>
+           
           </p>
         </div>
         <div className="hero__derecha">

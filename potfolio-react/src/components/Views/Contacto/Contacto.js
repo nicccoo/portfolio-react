@@ -25,7 +25,7 @@ const Contacto = () => {
           </a>
         </div>
         <div className="author">
-          <h6>Nicolas Ramirez - Portfolio v1.0</h6>
+          <h6>Nicolas Ramirez - © Copyright 2021</h6>
         </div>
       </div>
     </div>

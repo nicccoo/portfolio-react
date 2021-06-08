@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 body {
 background:linear-gradient(0deg, rgb(40, 28, 77) 0%, rgb(83, 41, 174) 78%, rgb(98, 45, 178) 87%);
-  
 }
 
 .container-hero {
@@ -18,29 +18,33 @@ background:linear-gradient(0deg, rgb(40, 28, 77) 0%, rgb(83, 41, 174) 78%, rgb(9
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 45%
+  width: 45%;
 }
 
+.orange {
+  color:#F55F44
+}
 
 
 .hero-title {
   display: inline-block;
-  font-family: "Quicksand", sans-serif;
-  font-size: 80px;
-  color: #000 ;
-  opacity: 0.7;
-  margin-top: -350px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 120px;
+  margin-left: 50%;
+  color: #222;
+  opacity: 0.9;
+  margin-top: -45%;
 
 }
 
 .hero-text {
-  font-family: "Overpass", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   margin-left: 25%;
   font-size: 30px;
   line-height: 40px;
-  color: #111;
-  margin-top: 30px;
-  opacity: 0.7;
+  /* color: #F55F44; */
+  color: #222;
+  margin-top: 4%;
 }
 
 .hero__derecha {
