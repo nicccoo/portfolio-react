@@ -84,16 +84,13 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 70px;
   }
 
   .container-desplegable {
-    display: flex;
+    display: inline-block;
   }
 
-  .navbar__items a {
-    margin: 0;
-    padding: 0;
-  }
 
   .logo {
     display: none;

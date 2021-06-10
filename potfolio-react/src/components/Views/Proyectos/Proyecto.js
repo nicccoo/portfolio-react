@@ -12,6 +12,6 @@ const Proyecto = (props) => {
       </div>
     </div>
   );
-};
+};  
 
 export default Proyecto;
