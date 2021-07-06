@@ -1,0 +1,135 @@
+.about {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: -40px ;
+}
+
+
+
+.about-title  {
+    text-align:center;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    
+    
+}
+
+.fondo {
+    background-color:#8C85FF;
+    width: 50%;
+    height: 37%;
+    opacity: 0.8;
+    position:absolute;
+    box-shadow: 0px 0px 2px 4px #8C85FF;
+    z-index: -1;
+    margin-top: 5%;  
+    margin-left: 45%;
+    border-radius: 8px;
+
+}
+
+.fondo-secundario {
+    background-color: #6C63FF;
+    width: 45%;
+    height: 55%;
+    position:absolute;
+    box-shadow: 1px 1px 1px 1px #6C63FF;
+    z-index: -999;
+    margin-top: -13.5%;  
+    margin-left: 5%;
+    border-radius: 8px;
+}
+
+.subrayado {
+    background-color: #6C63FF;
+    position: relative;
+    width: 16.8%;
+    height: 10px;
+    top: -20px;
+    opacity: 0.6;
+    z-index: -1;
+    left: 41.6%;
+    
+}
+
+.about-izq {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+}
+
+.about-izq img {
+    margin: -300px 0 0 150px;
+    width: 80%;
+    
+}
+
+.about-der {
+    width: 50%;
+}
+
+.about-desc {
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.about-text {
+    width: 80%;
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #000;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+
+    .about {
+        background-color: #6C63FF;
+        height: 100vh;
+    }
+
+    .about-izq img {
+        display:none
+    }
+
+    .fondo {
+        display: none;
+    }
+
+    .fondo-secundario{
+        display: none;
+    }
+
+    .about-izq {
+        display: none;
+    }
+
+    .about-der {
+        width: 100%;
+    }
+
+    .about-text {
+        font-size:18px;
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+
+    .about-desc {
+        margin-top: -5px
+    }
+
+    .about-title {
+        position:absolute;
+        margin-top: 0px;
+        margin-left: 40px;
+        
+    }
+
+}

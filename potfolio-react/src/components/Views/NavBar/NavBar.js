@@ -1,32 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import logo from "./img/logo.png";
-import "./styles-navbar.css";
 import MenuDesplegable from "./MenuDesplegable";
+import "./styles-navbar.css";
 
 export default function NavBar() {
+  const [navbar, setNavbar] = useState(null);
+
+  const changeNavbar = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbar);
+
   return (
     <>
-      <div className="container">
-        
-
+      <div className={navbar ? "container active" : "container"}>
         <MenuDesplegable />
-        <div className="logo">
-          <a href="#">
-            <img src={logo} alt="" />
-          </a>
-        </div>
+              <Link
+                className="logo"
+                activeClass="active"
+                to="hero"
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={-100}
+              >
+                <img src={logo} alt="" />
+              </Link>
         <nav className="navbar">
           <div className="navbar__items">
             <ul>
               <Link
                 className="buttons"
                 activeClass="active"
-                to="hero"
+                to="about"
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                offset={0}
+                offset={-138}
               >
                 SOBRE MI
               </Link>
@@ -37,12 +53,12 @@ export default function NavBar() {
                 spy={true}
                 smooth={true}
                 hashSpy={true}
-                offset={0}
+                offset={-70}
               >
                 PROYECTOS
               </Link>
               <Link
-              className="buttons"
+                className="buttons"
                 activeClass="active"
                 to="contacto"
                 spy={true}
@@ -55,9 +71,7 @@ export default function NavBar() {
             </ul>
           </div>
         </nav>
-        
       </div>
-
     </>
   );
 }

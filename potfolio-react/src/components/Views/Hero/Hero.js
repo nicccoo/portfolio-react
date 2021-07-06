@@ -1,19 +1,19 @@
 import React from "react";
 import "./styles-hero.css";
-import imgHero from "./img/hero2.svg";
+import imgHero from "./img/hero.svg";
 
 export const Hero = () => {
   return (
     <div>
       <div className="container-hero" id="hero">
         <div className="hero__izquierda">
-          <h2 className="hero-title">Bienvenidos!</h2>
+          <h2 className="hero-title">Hola, soy Nico</h2>
           <p className="hero-text">
-            Me llamo <b className="orange">Nicolas Ramirez,</b> soy
-            desarrollador <b className="orange">Front End</b> y este es mi{" "}
-            <b className="orange">Portafolio. </b>Espero que lo disfrutes!
+            Desarollador Front-End
           </p>
-        {/* <button className="button-cv">Download CV</button> */}
+          <p className="hero-text">
+            Bienvenidos a mi portafolio
+          </p>
         </div>
         <div className="hero__derecha">
           <img src={imgHero} alt="" />

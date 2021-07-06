@@ -1,66 +1,47 @@
 import React, { useState } from "react";
-import { Drawer, List, ListItem, ListItemText } from "@material-ui/core";
-import { IconButton } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import { makeStyles } from "@material-ui/core/styles";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import { SidebarData } from "./SidebarData";
+import { Link } from "react-scroll";
 
-const useStyles = makeStyles({
-  drawer: {
-    color: "red",
-  },
-  list: {
-    width: "160px",
-  },
-  listItem: {
-    borderBottom: "1px solid #ccc",
-  },
-  backButton: {
-    left: "60px",
-  },
-  menuButton: {
-    bottom: "1px",
-  },
-});
+export default function MenuDesplegable() {
+  const [sidebar, setSidebar] = useState(false);
 
-const MenuDesplegable = () => {
-  const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  const toggleMenu = () => {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
-  };
-
-
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <div className="container-desplegable">
-      <IconButton onClick={toggleMenu} className={classes.menuButton}>
-        <MenuIcon fontSize="large" />
-      </IconButton>
-      <Drawer
-        variant="temporary"
-        open={open}
-        onClose={toggleMenu}
-        className={classes.drawer}
-      >
-        <IconButton onClick={toggleMenu} className={classes.backButton}>
-          <ArrowBackIosIcon />
-        </IconButton>
-        <List className={classes.list}>
-          {["SOBRE MI", "PROYECTOS", "CONTACTO"].map((text, index) => (
-            <ListItem button key={text} className={classes.listItem}>
-              <ListItemText primary={text} className={classes.listText} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+      <a className="menu-bars">
+        <FaIcons.FaBars onClick={showSidebar} />
+      </a>
+
+      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-menu-items" onClick={showSidebar}>
+          <li className="navbar-toggle">
+            <a className="menu-close">
+              <AiIcons.AiOutlineClose />
+            </a>
+          </li>
+          {SidebarData.map((item, index) => {
+            return (
+              <li key={index} className={item.cName}>
+                <Link
+                  onClick={showSidebar}
+                  activeClass="active"
+                  to={item.path}
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  offset={0}
+                >
+                  <span className="sidebar-icon">{item.icon}</span>
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
     </div>
   );
-};
-
-export default MenuDesplegable;
+}
